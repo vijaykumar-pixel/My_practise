@@ -1,0 +1,15 @@
+'''
+Write a Python function to sort a list of dictionaries by a given key.**
+'''
+def sort_dicts_by_key(lst: list, key: str) -> list:
+    return sorted(lst, key=lambda x: x[key])
+
+# Test case
+data = [
+{"name": "John", "age": 25},
+{"name": "Jane", "age": 30},
+{"name": "Doe", "age": 22}
+]
+sorted_data = sort_dicts_by_key(data, "age")
+print(sorted_data)
+# Output: [{'name': 'Doe', 'age': 22}, {'name': 'John', 'age': 25}, {'name': 'Jane', 'age': 30}]
